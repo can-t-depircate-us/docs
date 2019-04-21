@@ -26,5 +26,5 @@ Technologies used for unihack hackaton.
 * chat API v2
 
 # Other ideas
-* Statistics in real time for usability in different zones of an article, document, etc.
+* Statistics in real time for usability in different zones of an article, document, etc, cv.
 
