@@ -1,6 +1,35 @@
 # docs
 Technologies used for unihack hackaton.
 
+# Drone/Robot trash smart collector
+
+## Hardware
+### People
+* Paul ( camera, ml recognition , robot hardware)
+### Tech 
+* raspberry
+* protocol 
+
+## Backend
+### People
+* Dani ( CI)
+### Tech
+* Spring  
+* AWS EC2
+* CI with git and EC2
+* Relational Database (Drones/Robots, Coordonates + Photos, Users) 
+
+## Web
+### People
+* Stefan ( speech recognition)
+* Sebi ( drone control)
+### Tech
+* Angular
+
+## Mobile (optional)
+* Android Studio 
+* Ionic
+
 
 # HR BOT
 
