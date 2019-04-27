@@ -1,7 +1,7 @@
 # docs
 Technologies used for unihack hackaton.
 
-# Drone/Robot trash smart collector
+# Drone/Robot smart trash collector / tree land clearing
 
 ## Hardware
 ### People
