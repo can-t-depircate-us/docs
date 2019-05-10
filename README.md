@@ -3,16 +3,11 @@ Technologies used for unihack hackaton.
 
 # Drone/Robot smart trash collector / tree land clearing
 
-## Hardware
-### People
-* Paul ( camera, ml recognition , robot hardware)
-### Tech 
-* raspberry
-* protocol 
-
 ## Backend
 ### People
-* Dani ( CI)
+* Dani ( CI, Spring -> manage and persist data)
+* Paul ( aiohttp -> streaming & live data)
+* Sebi ( Image recognition) 
 ### Tech
 * Spring  
 * AWS EC2
@@ -21,8 +16,8 @@ Technologies used for unihack hackaton.
 
 ## Web
 ### People
-* Stefan ( speech recognition)
-* Sebi ( drone control)
+* Stefan ( Angular -> frontend)
+* Sebi ( Angular -> frontend support)
 ### Tech
 * Angular
 
@@ -30,6 +25,28 @@ Technologies used for unihack hackaton.
 * Android Studio 
 * Ionic
 
+## Flow 
+### Nodes:
+* backend_1: aiohttp python streaming service
+* backend_2: aiohttp python Image recognition service & drone commands service
+* backend_persist: spring persist data service
+
+* streaming (admin) : 
+    - connection_flow: frontend -> backend_1 -> token backend_persist -> if OK start coonection frontend<->backend_1 
+    - data_flow: drone -> websocket_1 backend_1 -> frontend
+* live data(coord, img):
+    - connection_flow: frontend -> backend_2 -> start connection
+    - data_flow: drone -> backend_2 -> Image Recognition -> if OK http request to backend_persist & (websocket_2 -> frontend)
+    
+* drone commands (admin): frontend http request -> backend_2 -> backend_persist token validation (persist in memory of backend_2) -> if OK drone command  
+
+* spring admin user for: streaming, commands, clean zone validation
+
+
+## Extras 
+* normal users for score rewarding, notifications and extra security
+* vocal instructions
+* mobile app
 
 # HR BOT
 
