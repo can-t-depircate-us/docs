@@ -25,13 +25,13 @@ Technologies used for unihack hackaton.
 * Android Studio 
 * Ionic
 
-## Flow 
-### Nodes:
+## Nodes:
 * backend_1: aiohttp python streaming service
 * backend_2: aiohttp python Image recognition service
 * backend_3: atohttp python default drone commands & admin commands
 * backend_persist: spring persist data service
 
+## Flow 
 * streaming (admin) : 
     - connection_flow: frontend -> backend_1 -> token backend_persist -> if OK start coonection frontend<->backend_1 
     - data_flow: drone -> websocket_1 backend_1 -> frontend
