@@ -7,7 +7,7 @@ Technologies used for unihack hackaton.
 ### People
 * Dani ( CI, Spring -> manage and persist data)
 * Paul ( aiohttp -> streaming & live data)
-* Sebi ( Image recognition) 
+* Sebi ( Image recognition, drone command logic) 
 ### Tech
 * Spring  
 * AWS EC2
@@ -28,7 +28,8 @@ Technologies used for unihack hackaton.
 ## Flow 
 ### Nodes:
 * backend_1: aiohttp python streaming service
-* backend_2: aiohttp python Image recognition service & drone commands service
+* backend_2: aiohttp python Image recognition service
+* backend_3: atohttp python default drone commands & admin commands
 * backend_persist: spring persist data service
 
 * streaming (admin) : 
@@ -38,14 +39,14 @@ Technologies used for unihack hackaton.
     - connection_flow: frontend -> backend_2 -> start connection
     - data_flow: drone -> backend_2 -> Image Recognition -> if OK http request to backend_persist & (websocket_2 -> frontend)
     
-* drone commands (admin): frontend http request -> backend_2 -> backend_persist token validation (persist in memory of backend_2) -> if OK drone command  
+* drone commands (admin): frontend http request -> backend_3 -> backend_persist token validation (persist in memory of backend_2) -> if OK drone command & bigger weight than default drone commands 
 
 * spring admin user for: streaming, commands, clean zone validation
 
 
 ## Extras 
 * normal users for score rewarding, notifications and extra security
-* vocal instructions
+* vocal instructions !!!!!!! Nice to have !!!!!!!
 * mobile app
 
 # HR BOT
