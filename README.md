@@ -1,17 +1,12 @@
-# docs
-Technologies used for unihack hackaton.
-
 # Drone/Robot smart trash collector / tree land clearing
 
 ## Backend
 ### People
-* Dani ( CI, Spring -> manage and persist data)
+* Dani ( Spring -> manage and persist data)
 * Paul ( aiohttp -> streaming & live data)
 * Sebi ( Image recognition, drone command logic) 
 ### Tech
-* Spring  
-* AWS EC2
-* CI with git and EC2
+* Spring
 * Relational Database (Drones/Robots, Coordonates + Photos, Users) 
 
 ## Web
@@ -25,11 +20,38 @@ Technologies used for unihack hackaton.
 * Android Studio 
 * Ionic
 
-## Nodes:
+## Backend Nodes:
 * backend_1: aiohttp python streaming service
 * backend_2: aiohttp python Image recognition service
 * backend_3: atohttp python default drone commands & admin commands
 * backend_persist: spring persist data service
+
+### Spring - persistence backend
+* user management
+* event management
+   
+ 	Models:
+    	
+  * User
+    ```json
+    	{
+        	"name": "",
+            "role": "",
+            "created_at": "timestamp",
+            "updated_at": "timestamp",
+         	"score": "???"
+        }
+    ```
+  * Event
+  	```json
+    	{
+        	"image": "blob",
+            "at": "timestamp",
+            "label": "Open/Pending/Closed",
+            "": ""
+        }
+    ```
+
 
 ## Flow 
 * streaming (admin) : 
@@ -48,30 +70,4 @@ Technologies used for unihack hackaton.
 * normal users for score rewarding, notifications and extra security
 * vocal instructions !!!!!!! Nice to have !!!!!!!
 * mobile app
-
-# HR BOT
-
-## Flow
-* start: configuration -> linked in API for members -> start chat
-* chat: bot preprocessing -> bot starts chat -> user input for ANN -> refresh ANN -> bot responds -> go to user input for ANN until END 
-
-## Frontend
-#### for configurations
-* Angular
-
-## Backend
-#### for complex processing
-* aws lambda functions
-
-## Chat bot ANN
-* https://www.luis.ai/home
-* google assistant 
-* https://aws.amazon.com/lex/
-
-## Linked 
-* search users API v2
-* chat API v2
-
-# Other ideas
-* Statistics in real time for usability in different zones of an article, document, etc, cv.
 
